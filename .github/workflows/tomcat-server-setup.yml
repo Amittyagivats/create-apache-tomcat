@@ -1,0 +1,13 @@
+name: tomcate setup
+on: [push]
+jobs:
+  tomcateJob:
+    runs-on: windows-latest
+    name: Checkout Apache Tomcat
+    steps:
+    - name: tomcat setup
+      uses: actions/checkout@v2
+      with:
+        repository: apache/tomcat  
+        ref: master
+        path: ./tomcat
